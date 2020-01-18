@@ -1,0 +1,21 @@
+{
+  "name": "aircnc",
+  "description": "Uma maneira de encontrar devs.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "repository": "git@github.com:hugo-marcelo/aircnc.git",
+  "author": "Hugo Marcelo <hugomarcelo91@gmail.com>",
+  "scripts": {
+    "start:backend": "yarn workspace @aircnc/backend start",
+    "start:web": "concurrently --kill-others \"yarn start:backend\" \"yarn workspace @aircnc/web start\"",
+    "start:mobile": "concurrently --kill-others \"yarn start:backend\" \"yarn workspace @aircnc/mobile start\"",
+    "start": "concurrently --kill-others \"yarn start:backend\" \"yarn workspace @aircnc/web start\" \"yarn workspace @aircnc/mobile start\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
