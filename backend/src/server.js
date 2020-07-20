@@ -4,12 +4,12 @@ const cors = require("cors");
 const path = require("path");
 
 const socketio = require("socket.io");
-const http = require("http");
+const https = require("https");
 
 const routes = require("./routes");
 
 const app = express();
-const server = http.Server(app);
+const server = https.Server(app);
 const io = socketio(server);
 
 mongoose.connect(
