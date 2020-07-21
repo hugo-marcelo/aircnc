@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Semana Omnistack 9: back-end e front-end web
+  Semana Omnistack 9: back-end, front-end e mobile
 </h3>
 
 <p align = "center">
